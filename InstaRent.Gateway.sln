@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstaRent.WebGateway", "src\InstaRent.WebGateway\InstaRent.WebGateway.csproj", "{FB040BC6-0A52-4C5E-B195-81C2A51294C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{32D69F9F-4B90-49EF-8975-38A90F228057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaRent.Shared.Hosting.GateWays", "src\InstaRent.Shared.Hosting.GateWays\InstaRent.Shared.Hosting.GateWays.csproj", "{1678163F-5FCF-4B6B-B1E5-6F7448A51ADF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB040BC6-0A52-4C5E-B195-81C2A51294C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB040BC6-0A52-4C5E-B195-81C2A51294C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB040BC6-0A52-4C5E-B195-81C2A51294C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB040BC6-0A52-4C5E-B195-81C2A51294C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1678163F-5FCF-4B6B-B1E5-6F7448A51ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1678163F-5FCF-4B6B-B1E5-6F7448A51ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1678163F-5FCF-4B6B-B1E5-6F7448A51ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1678163F-5FCF-4B6B-B1E5-6F7448A51ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1678163F-5FCF-4B6B-B1E5-6F7448A51ADF} = {32D69F9F-4B90-49EF-8975-38A90F228057}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA3AB37F-0B24-4A3A-8376-7F38C6BC26F9}
+	EndGlobalSection
+EndGlobal
