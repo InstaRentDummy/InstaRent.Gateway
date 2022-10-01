@@ -6,11 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>0498ec6b-4782-4be4-9bde-4660a8670512</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
   </ItemGroup>
+
+ 
 
   <ItemGroup>
     <ProjectReference Include="..\InstaRent.Shared.Hosting.GateWays\InstaRent.Shared.Hosting.GateWays.csproj" />
