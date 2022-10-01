@@ -44,19 +44,6 @@
       ],
       "UpstreamPathTemplate": "/api/User/{everything}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
-    },
-    {
-      "ServiceKey": "Abp Service",
-      "DownstreamPathTemplate": "/api/abp/{everything}",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 44316
-        }
-      ],
-      "UpstreamPathTemplate": "/api/abp/{everything}",
-      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     }
   ]
 }
