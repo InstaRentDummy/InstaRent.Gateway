@@ -17,7 +17,6 @@
       "UpstreamPathTemplate": "/api/catalog/{everything}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
-
     {
       "ServiceKey": "Cart Service",
       "DownstreamPathTemplate": "/api/Cart/{everything}",
@@ -31,7 +30,19 @@
       "UpstreamPathTemplate": "/api/Cart/{everything}",
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
-
+    {
+      "ServiceKey": "Payment Service",
+      "DownstreamPathTemplate": "/api/Payment/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44312
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Payment/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
     {
       "ServiceKey": "Login Service",
       "DownstreamPathTemplate": "/api/User/{everything}",
