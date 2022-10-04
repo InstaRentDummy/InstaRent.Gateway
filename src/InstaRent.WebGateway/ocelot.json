@@ -39,7 +39,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44349
+          "Port": 44320
         }
       ],
       "UpstreamPathTemplate": "/api/User/{everything}",
