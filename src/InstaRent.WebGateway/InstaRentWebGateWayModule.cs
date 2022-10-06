@@ -72,18 +72,36 @@ namespace InstaRent.WebGateway
                     .Select(r => r.First())
                     .Distinct();
 
+                var swaggerURLs = configuration.GetSection("SwaggersEndURLs").Get<List<SwaggerURLConfiguration>>();
+
                 foreach (var config in routedServices.OrderBy(q => q.ServiceKey))
                 {
-                    var url = $"{config.DownstreamScheme}://{config.DownstreamHostAndPorts.FirstOrDefault()?.Host}:{config.DownstreamHostAndPorts.FirstOrDefault()?.Port}";
-                    if (!env.IsDevelopment())
+                    var swaggerURL = swaggerURLs.Where(r => r.ServiceKey.Equals(config.ServiceKey)).FirstOrDefault();
+                    var url = "";
+                    if (swaggerURL != null)
                     {
-                        url = $"https://{config.DownstreamHostAndPorts.FirstOrDefault()?.Host}";
+                        url = $"{config.DownstreamScheme}://{swaggerURL.URL}:{config.DownstreamHostAndPorts.FirstOrDefault()?.Port}";
+                        if (!env.IsDevelopment())
+                        {
+                            url = $"https://{swaggerURL.URL}";
+                        }
                     }
+                    else
+                    {
+                        url = $"{config.DownstreamScheme}://{config.DownstreamHostAndPorts.FirstOrDefault()?.Host}:{config.DownstreamHostAndPorts.FirstOrDefault()?.Port}";
+                        if (!env.IsDevelopment())
+                        {
+                            url = $"https://{config.DownstreamHostAndPorts.FirstOrDefault()?.Host}";
+                        }
+                    }
+
+                    
 
                     options.SwaggerEndpoint($"{url}/swagger/v1/swagger.json", $"{config.ServiceKey} API");
                      
                 }
             });
+            
             app.UseAbpSerilogEnrichers();
              
             app.UseRewriter(new RewriteOptions()

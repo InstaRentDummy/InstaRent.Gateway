@@ -17,3 +17,10 @@ public class HostAndPort
     public string Host { get; set; }
     public int Port { get; set; }
 }
+
+public class SwaggerURLConfiguration
+{
+    public string ServiceKey { get; set; }
+    public string URL { get; set; }
+    
+}
