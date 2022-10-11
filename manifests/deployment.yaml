@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: webgateway
-        image: instarent.azurecr.io/instarentwebgateway:latest
+        image: instarent.azurecr.io/instarent-webgateway:latest
         ports:
         - containerPort: 80
         - containerPort: 443
