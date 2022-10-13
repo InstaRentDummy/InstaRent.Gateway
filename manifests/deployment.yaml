@@ -18,7 +18,7 @@ metadata:
   labels:
     app: instarent-webgateway
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: instarent-webgateway
