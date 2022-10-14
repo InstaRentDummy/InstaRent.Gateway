@@ -6,7 +6,7 @@ metadata:
     volume.beta.kubernetes.io/storage-class: azure-disk
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: 3Gi
@@ -35,9 +35,9 @@ spec:
         - containerPort: 443
         resources:
           limits:
-            cpu: 1000m
-          requests:
             cpu: 500m
+          requests:
+            cpu: 200m
         env:
         #- name: ASPNETCORE_ENVIRONMENT 
         #  value: "DEVELOPMENT"
