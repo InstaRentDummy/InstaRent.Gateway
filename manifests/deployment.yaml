@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: logsdata
+  name: irlogs
   annotations:
     volume.beta.kubernetes.io/storage-class: azure-disk
 spec:
@@ -180,7 +180,7 @@ spec:
           secretName: instranet-cert     
       - name: webgatewaylogsdata
         persistentVolumeClaim:
-          claimName: logsdata        
+          claimName: irlogs        
 ---
 apiVersion: v1
 kind: Service
