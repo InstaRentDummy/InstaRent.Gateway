@@ -35,9 +35,9 @@ spec:
         - containerPort: 443
         resources:
           limits:
-            cpu: 500m
+            cpu: 1000m
           requests:
-            cpu: 300m
+            cpu: 500m
         env:
         #- name: ASPNETCORE_ENVIRONMENT 
         #  value: "DEVELOPMENT"
