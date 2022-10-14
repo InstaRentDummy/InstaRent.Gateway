@@ -33,6 +33,11 @@ spec:
         ports:
         - containerPort: 80
         - containerPort: 443
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
         env:
         #- name: ASPNETCORE_ENVIRONMENT 
         #  value: "DEVELOPMENT"
@@ -196,3 +201,16 @@ spec:
       port: 80
       targetPort: 80
       #nodePort: 30026 # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)      
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+ name: hpa-webgateway-deployment
+spec:
+ scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: instarent-webgateway-deployment
+ minReplicas: 1
+ maxReplicas: 10
+ targetCPUUtilizationPercentage: 70
