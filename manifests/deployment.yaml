@@ -44,7 +44,10 @@ spec:
         - name: ASPNETCORE_URLS
           value: "https://+;http://+"
         - name: ASPNETCORE_Kestrel__Certificates__Default__Password
-          value: "8b6039b6-c67a-448b-977b-0ce6d3fcfd49"
+          valueFrom: 
+            secretKeyRef:
+              name: instranet-app-secret
+              key: ASPNETCORE_Kestrel__Certificates__Default__Password
         - name: ASPNETCORE_Kestrel__Certificates__Default__Path
           value: "/dev-cert/localhost.pfx"
         - name: App__SelfUrl
