@@ -51,18 +51,18 @@ spec:
         - name: ASPNETCORE_Kestrel__Certificates__Default__Path
           value: "/dev-cert/localhost.pfx"
         - name: App__SelfUrl
-          value: "https://webgateway.instarentshop.com"
+          value: "https://webgateway.instarentbag.com"
         - name: App__CorsOrigins
-          value: "https://app.instarentshop.com,http://app.instarentshop.com,https://catalog-service,http://catalog-service,https://cart-service,http://cart-service,https://login-service,http://login-service"
+          value: "https://app.instarentbag.com,http://app.instarentbag.com,https://catalog-service,http://catalog-service,https://cart-service,http://cart-service,https://login-service,http://login-service"
         - name: GlobalConfiguration__BaseUrl
-          value: "https://webgateway.instarentshop.com"
+          value: "https://webgateway.instarentbag.com"
         - name: GlobalConfiguration__RequestIdKey
           value: "OcRequestId"
                         
         - name: SwaggersEndURLs__0__ServiceKey
           value: "Catalog Service"
         - name: SwaggersEndURLs__0__URL
-          value: "catalog.instarentshop.com"
+          value: "catalog.instarentbag.com"
         - name: Routes__0__ServiceKey
           value: "Catalog Service"
         - name: Routes__0__DownstreamPathTemplate
@@ -87,7 +87,7 @@ spec:
         - name: SwaggersEndURLs__1__ServiceKey
           value: "Cart Service"
         - name: SwaggersEndURLs__1__URL
-          value: "cart.instarentshop.com"
+          value: "cart.instarentbag.com"
         - name: Routes__1__ServiceKey
           value: "Cart Service"
         - name: Routes__1__DownstreamPathTemplate
@@ -113,7 +113,7 @@ spec:
         - name: SwaggersEndURLs__2__ServiceKey
           value: "Login Service"
         - name: SwaggersEndURLs__2__URL
-          value: "login.instarentshop.com"
+          value: "login.instarentbag.com"
         - name: Routes__2__ServiceKey
           value: "Login Service"
         - name: Routes__2__DownstreamPathTemplate
@@ -138,7 +138,7 @@ spec:
         - name: SwaggersEndURLs__3__ServiceKey
           value: "Payment Service"
         - name: SwaggersEndURLs__3__URL
-          value: "payment.instarentshop.com"
+          value: "payment.instarentbag.com"
         - name: Routes__3__ServiceKey
           value: "Payment Service"
         - name: Routes__3__DownstreamPathTemplate
